@@ -39,7 +39,7 @@ app.post("/submit", (req, res) => {
 			await client.db("admin").command({ ping: 1 });
 			console.log("Connected successfully to server");
 
-			const db = await client.db("user-account");
+			const db = await client.db("my-db");
 			userObj["userId"] = 1;
 			const query = { userId: 1 };
 			let newValues = { $set: userObj };
