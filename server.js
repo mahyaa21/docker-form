@@ -23,13 +23,14 @@ app.post("/submit", (req, res) => {
 	console.log("connecting to the db ...");
 
 	// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-	const client = new MongoClient("mongodb://mahya:33563821@localhost:27017", {
+	const client = new MongoClient("mongodb://mahya:123456@localhost:27017", {
 		serverApi: {
 			version: ServerApiVersion.v1,
 			strict: true,
 			deprecationErrors: true,
 		},
 	});
+
 
 	async function run() {
 		try {
@@ -65,7 +66,6 @@ app.post("/submit", (req, res) => {
 	}
 
 	run().catch(console.dir);
-
 });
 
 // Start the server
