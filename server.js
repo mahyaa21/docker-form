@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3000;
-const uri = "mongodb://admin:pass@localhost:27017";
+const uri = "mongodb://admin:pass@mongodb:27017";
 // Middleware to parse URL-encoded bodies (form submissions)
 app.use(bodyParser.urlencoded({ extended: true }));
 

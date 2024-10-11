@@ -20,7 +20,8 @@ CMD ["node", "server.js"]
 # with RUN command you can execute any linux commands
 # It runs in the cintainer environment
 
-# COPY executes in the host. It means copy file from host(soutce) to the container(destination)
+# COPY executes in the host. It means copy file from host(source) to the container(destination)
 
 # It execute an entry point linux command. It translates to node server.js
 # you can have multiple RUN but you can have one CMD command.
+
