@@ -14,6 +14,11 @@ app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "index.html"));
 });
 
+// Serve the confirmation page
+app.get("/confirmation", (req, res) => {
+	res.sendFile(path.join(__dirname, "confirmation.html"));
+});
+
 // Route to handle form submissions
 app.post("/submit", (req, res) => {
 	const name = req.body.name;
@@ -55,7 +60,7 @@ app.post("/submit", (req, res) => {
 				console.log("User updated successfully");
 			}
 
-			res.send(userObj);
+			res.redirect(`/confirmation?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`);
 		} catch (err) {
 			console.log(err);
 			res.status(500).send("An error occurred while processing your request.");

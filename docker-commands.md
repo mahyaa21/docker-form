@@ -15,9 +15,9 @@ mongo
 ## start mongo-express
 docker run -d \
 -p 8081:8081
--p ME_CONFIG_MONGODB_ADMINUSERNAME=mahya
--p ME_CONFIG_MONGODB_ADMINPASSWORD=123456
--p ME_CONFIG_MONGODB_SERVER=mongodb
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=mahya
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=123456
+-e ME_CONFIG_MONGODB_SERVER=mongodb
 --net mongo-network
 --name mongo-express
 mongo-express
